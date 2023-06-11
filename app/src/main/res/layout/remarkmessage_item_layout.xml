@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_rcvd_msg"
+    android:padding="@dimen/_8sdp"
+    android:layout_marginTop="@dimen/_5sdp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvComment"
+        android:text="Comment"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvSenderName"
+        android:layout_marginRight="@dimen/_12sdp"
+        android:text="SenderName"
+        android:layout_marginTop="@dimen/_20sdp"
+    android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvCommentDatetime"
+        android:layout_marginRight="@dimen/_12sdp"
+        android:text="DateTime"
+android:layout_alignParentEnd="true"
+        android:layout_below="@id/tvSenderName"
+       />
+
+</RelativeLayout>

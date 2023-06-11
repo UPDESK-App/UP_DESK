@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.Tasks"
+    android:orientation="vertical"
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_centerVertical="true"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/LLAssignedTasks"
+
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvUploadedTasks"
+            android:text="Assigned Tasks"
+
+            android:layout_gravity="center_horizontal"
+            android:textSize="25sp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textStyle="bold"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:gravity="center_horizontal"
+            />
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/task_item_layout"
+            android:id="@+id/rvTaskUploadedFiles"
+            android:layout_below="@id/tvUploadedTasks"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+
+            android:paddingHorizontal="@dimen/_5sdp"
+
+            >
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/LLSubmittedTasks"
+        android:layout_below="@id/LLAssignedTasks"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvSubmittedTasks"
+            android:text="Submitted Tasks"
+            android:layout_gravity="center_horizontal"
+            android:textSize="25sp"
+
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textStyle="bold"
+            android:layout_marginVertical="@dimen/_5sdp"
+            android:gravity="center_horizontal"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvSubmittedTasks"
+            tools:listitem="@layout/task_employee_layout"
+            android:id="@+id/rvTaskSubmittedFiles"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+
+            android:paddingHorizontal="@dimen/_5sdp"
+
+            >
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+</LinearLayout>
+
+
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnShowBottomSheet"
+        android:layout_marginTop="@dimen/_45sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_7sdp"
+        android:text="New TASK+"
+        android:background="@drawable/btn_bg_rc"
+
+        />
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/CardViewUploadTask"
+        android:layout_margin="@dimen/_15sdp"
+        android:layout_gravity="center"
+android:visibility="gone"
+        android:backgroundTint="#C4C5CC"
+        app:cardElevation="@dimen/_2sdp"
+        android:layout_centerInParent="true"
+
+
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+
+            android:padding="@dimen/_10sdp"
+            >
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/cancel_btn"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/btn_cancel"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Upload New Task"
+                android:layout_gravity="center_horizontal"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textStyle="bold"
+                android:id="@+id/txtUploadFile"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                />
+            <EditText
+                android:id="@+id/etFileName"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter file name"
+                android:padding="15dp"
+                android:background="@drawable/et_bg"
+                android:layout_below="@id/txtUploadFile"
+                android:singleLine="true"
+                android:layout_marginBottom="@dimen/_15sdp"/>
+            <EditText
+                android:id="@+id/etFileDescription"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Add file descriction"
+                android:padding="15dp"
+                android:background="@drawable/et_bg"
+                android:layout_below="@id/etFileName"
+                android:singleLine="true"
+                android:layout_marginBottom="@dimen/_15sdp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/etFileDescription"
+                android:id="@+id/tvSelectedFileName"
+                android:drawableStart="@drawable/upload_file"
+                android:padding="15dp"
+                android:drawablePadding="@dimen/_5sdp"
+                android:hint="No file selected yet!"
+                android:textSize="@dimen/_13sdp"
+                android:background="@drawable/et_bg"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvSelectedFileName"
+                android:gravity="center_horizontal"
+                >
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnSelectFile"
+                    android:layout_below="@id/tvSelectedFileName"
+                    android:layout_centerHorizontal="true"
+                    android:text="Select file"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/btn_bg_rc"
+                    />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnUploadTask"
+                    android:layout_below="@id/tvSelectedFileName"
+                    android:layout_centerHorizontal="true"
+
+                    android:text="Upload"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:background="@drawable/btn_bg_rc"
+                    android:layout_toRightOf="@id/txtUploadFile"
+                    />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardUpdateStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/_15sdp"
+        android:backgroundTint="#F8F7F7"
+        app:cardCornerRadius="@dimen/_15sdp"
+        app:cardElevation="@dimen/_2sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/cardCancelButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/cancel_btn" />
+
+            <TextView
+                android:id="@+id/txtUpdateStatustitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:text="Update Status"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/txtUpdateStatusFilename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtUpdateStatustitle"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:text="Filename"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtUpdateStatusFilename"
+                android:gravity="center">
+
+                <RadioButton
+                    android:id="@+id/radioBtnAcceptTask"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Approve Task"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/radioBtnRejectTask"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Reject Task"
+
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/updateSelectedBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/radioGroup"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:text="Update" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

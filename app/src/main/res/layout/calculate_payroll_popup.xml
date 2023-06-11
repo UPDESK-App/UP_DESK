@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginVertical="@dimen/_8sdp"
+    android:background="@drawable/receiptdesign"
+    android:paddingVertical="@dimen/_50sdp"
+    android:id="@+id/rLPayrollReceipt"
+
+
+    >
+    <TextView
+        android:background="@color/lightGrayBlue" android:padding="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:paddingHorizontal="50dp"
+        android:id="@+id/tvMonthlyReceipt"
+        android:text="Payroll Receipt"
+
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:textSize="25dp"
+        android:fontFamily="sans-serif-smallcaps"
+        />
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_marginTop="20dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:background="#666666"
+        android:src="@drawable/up_desk_logo"
+        app:shapeAppearanceOverlay="@style/RoundedCornerImage"
+        android:id="@+id/logoUpdesk"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tvMonthlyReceipt"
+        />
+
+<TableLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/tblReceipt"
+    android:layout_below="@id/logoUpdesk"
+    android:layout_centerHorizontal="true"
+    android:layout_marginHorizontal="40dp"
+
+
+    >
+    <TableRow
+       >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvNameLabel"
+            android:textColor="@color/black"
+            android:text="Name: "
+
+            android:layout_marginTop="15dp"
+            android:textSize="20dp"
+            android:textStyle="italic"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvpayrollName"
+            android:layout_toEndOf="@id/tvNameLabel"
+            android:hint="Employee name"
+            android:layout_marginTop="15dp"
+            android:textSize="20dp"
+
+            />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvEmailLabel"
+            android:text="Email: "
+            android:textColor="@color/black"
+            android:layout_marginTop="5dp"
+            android:textSize="20dp"
+            android:textStyle="italic"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvpayrollEmail"
+            android:layout_toEndOf="@id/tvEmailLabel"
+            android:hint="Employee email"
+
+            android:layout_marginTop="5dp"
+            android:textSize="20dp"
+            />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvOCLabel"
+            android:text="OC: "
+            android:textColor="@color/black"
+            android:layout_marginTop="5dp"
+            android:textSize="20dp"
+            android:textStyle="italic"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvpayrollOC"
+            android:layout_toEndOf="@id/tvOCLabel"
+            android:hint="Employee OC"
+
+            android:layout_marginTop="5dp"
+            android:textSize="20dp"
+            />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvMonthLabel"
+            android:text="Month: "
+            android:textColor="@color/black"
+
+            android:layout_marginTop="5dp"
+            android:textSize="20dp"
+            android:textStyle="italic"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvPayrollMonth"
+            android:layout_toEndOf="@id/tvMonthLabel"
+            android:hint="Month name"
+
+            android:layout_marginTop="5dp"
+            android:textSize="20dp"
+            />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvWorkedHoursLabel"
+            android:text="Total hours: "
+            android:textColor="@color/black"
+
+            android:layout_marginTop="5dp"
+            android:textSize="20dp"
+            android:textStyle="italic"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvPayrollWorkedHours"
+            android:layout_toEndOf="@id/tvWorkedHoursLabel"
+            android:hint="total wh"
+            android:layout_marginTop="5dp"
+            android:textSize="20dp"
+            />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvTotalPayLabel"
+            android:text="Total Pay: "
+            android:gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvpayrollTotalPay"
+            android:layout_toEndOf="@id/tvTotalPayLabel"
+            android:hint="$0"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:textSize="25dp"
+            />
+    </TableRow>
+</TableLayout>
+
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SHARE"
+        android:textColor="@color/white"
+        android:background="@drawable/btn_bg_rc"
+        android:layout_below="@id/tblReceipt"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/btnSave"
+        android:drawablePadding="5dp"
+        android:drawableEnd="@drawable/share"
+        android:paddingVertical="@dimen/_5sdp"
+        android:paddingHorizontal="@dimen/_14sdp"
+        />
+</RelativeLayout>

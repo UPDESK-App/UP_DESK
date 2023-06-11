@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/RL"
+        >
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/imgusr"
+            android:src="@drawable/person"
+            android:background="#F8F7F7"
+            android:padding="5dp"
+            android:scaleType="fitXY"
+            app:shapeAppearanceOverlay="@style/RoundedCornerImage"
+            android:layout_centerVertical="true"
+            >
+
+        </com.google.android.material.imageview.ShapeableImageView>
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="UserName"
+            android:textSize="18sp"
+            android:layout_marginLeft="10dp"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-black"
+            android:layout_toEndOf="@id/imgusr"
+            />
+
+        <TextView
+            android:id="@+id/tvUserType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Employee/Employer"
+            android:fontFamily="sans-serif-light"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:padding="6dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@id/imgusr"
+            android:layout_below="@id/tvUserName"
+            />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/RL"
+        android:background="#F8F7F7"
+        android:paddingBottom="2dp" />
+
+
+</RelativeLayout>

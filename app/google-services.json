@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "232394822651",
+    "project_id": "up-desk",
+    "storage_bucket": "up-desk.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:232394822651:android:167dbd6c15f949ffc4b15e",
+        "android_client_info": {
+          "package_name": "com.example.updesk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "232394822651-h2lmtu9kub6uuh2btr38oqdug1v8iof7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUMu58vM4gzGkGMYf94I2_xkziuiimsPY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "232394822651-h2lmtu9kub6uuh2btr38oqdug1v8iof7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

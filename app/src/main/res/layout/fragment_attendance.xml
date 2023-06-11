@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.Attendance"
+    android:orientation="vertical"
+    android:weightSum="10"
+
+    >
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/tvMarkAttendance"
+        android:text="Mark Attendance"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:gravity="center_horizontal"
+        android:layout_weight="0.7"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:listitem="@layout/attendance_employee_layout"
+        android:id="@+id/rvEmployeesListForAttendance"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="9"
+        >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+
+
+        <Button
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:visibility="gone"
+            android:background="@drawable/btn_bg_rc"
+            android:text="Payroll Generator"
+            android:layout_marginHorizontal="10dp"
+            android:id="@+id/btnPayRollGenerator"
+            android:layout_alignParentEnd="true"
+            />
+
+
+</LinearLayout>

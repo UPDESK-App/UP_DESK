@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TaskRoom.ViewTaskDetailsActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remarks"
+        android:layout_gravity="center_horizontal"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textStyle="bold"
+        android:id="@+id/activityTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvTaskFileName"
+        android:text="Task Name: "
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_below="@id/activityTitle"
+        android:textSize="18sp"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fileNametextView"
+        android:hint="Task File Name"
+        android:textColor="@color/black"
+        android:layout_toRightOf="@id/tvTaskFileName"
+        android:layout_below="@id/activityTitle"
+        android:textSize="18sp"
+        android:layout_marginTop="@dimen/_20sdp"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvTaskFileDescription"
+        android:text="Task Description: "
+        android:textStyle="bold"
+        android:layout_below="@id/tvTaskFileName"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_7sdp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/descriptiontextView"
+        android:hint="Task Description"
+        android:layout_toRightOf="@id/tvTaskFileDescription"
+        android:layout_below="@id/tvTaskFileName"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/_7sdp"/>
+
+
+
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#040453"
+        android:src="@drawable/add_icon"
+        app:tint="@color/white"
+        android:id="@+id/fabNewComment"
+       android:layout_below="@id/descriptiontextView"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/remarkmessage_item_layout"
+        android:id="@+id/rvComments"
+        android:layout_below="@id/descriptiontextView"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+
+        android:paddingHorizontal="@dimen/_5sdp"
+
+        >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/CardViewAddnewComment"
+        android:layout_margin="@dimen/_15sdp"
+        android:layout_gravity="center"
+        android:backgroundTint="#C4C5CC"
+        app:cardElevation="@dimen/_2sdp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+
+            android:padding="@dimen/_10sdp"
+            >
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/cancel_btn"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/btn_cancel"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add New Comment"
+                android:layout_gravity="center_horizontal"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textStyle="bold"
+                android:id="@+id/tvaddNewCommentTitle"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                />
+            <EditText
+                android:id="@+id/etComment"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter comment"
+                android:padding="15dp"
+                android:background="@drawable/et_bg"
+                android:layout_below="@id/tvaddNewCommentTitle"
+                android:singleLine="true"
+                android:layout_marginBottom="@dimen/_15sdp" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnUploadComment"
+                android:layout_below="@id/etComment"
+                android:layout_centerHorizontal="true"
+                android:text="Upload"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:background="@drawable/btn_bg_rc"
+               />
+
+
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

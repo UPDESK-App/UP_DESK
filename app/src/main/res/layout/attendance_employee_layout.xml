@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/RL"
+        >
+
+
+
+        <TextView
+            android:id="@+id/tvEmployeeName"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="UserName"
+            android:textSize="18sp"
+            android:layout_marginLeft="10dp"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-black"
+
+            />
+
+        <TextView
+            android:id="@+id/tvEmployeeEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="employee@gmail.com"
+            android:fontFamily="sans-serif-light"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:padding="6dp"
+            android:layout_marginLeft="10dp"
+
+            android:layout_below="@id/tvEmployeeName"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mark "
+            android:id="@+id/btnMarkAttendance"
+           android:textColor="@color/black"
+            android:backgroundTint="#C4C5CC"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/_9sdp"
+            />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/RL"
+        android:background="#C4C5CC"
+        android:paddingBottom="2dp" />
+</RelativeLayout>

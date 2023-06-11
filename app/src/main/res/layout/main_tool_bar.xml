@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#040453"
+        android:id="@+id/toolBar"
+        >
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/imgusr"
+            android:src="@drawable/white_bg_logo"
+            android:scaleType="fitXY"
+            app:shapeAppearanceOverlay="@style/RoundedCornerImage"
+            android:layout_marginRight="@dimen/_9sdp"
+            >
+
+        </com.google.android.material.imageview.ShapeableImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UP DESK"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/_15sdp"
+            android:id="@+id/tvUpDesk"
+
+            />
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+</RelativeLayout>

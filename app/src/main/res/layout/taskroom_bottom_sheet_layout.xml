@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/taskroom_dialog_bg"
+    android:paddingHorizontal="@dimen/_15sdp"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose"
+        android:layout_gravity="center_horizontal"
+        android:textSize="@dimen/_20sdp"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textStyle="bold"
+        android:id="@+id/txtChoose"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/txtChoose"
+        android:background="#F8F7F7"
+        android:paddingBottom="2dp"
+        android:id="@+id/view"
+        android:layout_marginTop="@dimen/_10sdp"
+        />
+
+    <TextView
+        android:layout_marginTop="@dimen/_25sdp"
+        android:id="@+id/txtUpload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upload Task"
+        android:textSize="17sp"
+        android:textColor="@color/black"
+         android:layout_below="@id/view"
+        android:drawableStart="@drawable/upload"
+        android:drawablePadding="@dimen/_3sdp"
+
+        />
+    <TextView
+        android:layout_marginTop="@dimen/_25sdp"
+        android:id="@+id/txtSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit Task"
+        android:textSize="17sp"
+        android:textColor="@color/black"
+        android:layout_below="@id/view"
+        android:drawableStart="@drawable/upload"
+        android:drawablePadding="@dimen/_3sdp"
+        android:visibility="gone"
+        />
+
+
+</RelativeLayout>

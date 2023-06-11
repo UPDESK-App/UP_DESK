@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+<androidx.cardview.widget.CardView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    app:cardElevation="7dp"
+    app:cardCornerRadius="12dp"
+    android:layout_marginHorizontal="10dp"
+    >
+    <RelativeLayout
+        android:id="@+id/RL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        >
+
+        <TextView
+            android:id="@+id/tvSubmittedTaskFileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif-black"
+            android:padding="5dp"
+            android:text="FileName"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+
+            android:layout_centerHorizontal="true"
+            />
+        <TextView
+            android:id="@+id/tvSubmittedtaskUserName"
+            android:layout_below="@id/tvSubmittedTaskFileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="sans-serif-light"
+            android:padding="6dp"
+            android:text="Employee or Employer Name"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:layout_centerHorizontal="true"
+            />
+        <TextView
+            android:id="@+id/tvSubmittedTaskUserType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvSubmittedtaskUserName"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="sans-serif-light"
+            android:padding="6dp"
+            android:text="Employee/Employer"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:layout_centerHorizontal="true"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/tvSubmittedTaskUserType"
+        android:id="@+id/llTaskStatus"
+            >
+
+        <TextView
+            android:id="@+id/tvSubmittedtaskStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="sans-serif-light"
+            android:padding="6dp"
+            android:text="Status"
+            android:textColor="@color/black"
+
+            android:textSize="12sp"
+            />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/taskStatusVector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_toRightOf="@id/tvSubmittedtaskStatus"
+            android:src="@drawable/task_accepted_vector"
+
+            app:shapeAppearanceOverlay="@style/RoundedCornerImage"
+            android:layout_marginLeft="10dp"
+            />
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View Details"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_bg_rc"
+            android:layout_below="@id/llTaskStatus"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/btnViewSubmittedTaskDetails"
+            android:drawableEnd="@drawable/preview"
+            android:drawablePadding="@dimen/_5sdp"
+            android:paddingVertical="@dimen/_5sdp"
+            android:paddingHorizontal="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            />
+        <Button
+            android:id="@+id/btn_update_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnViewSubmittedTaskDetails"
+            android:backgroundTint="#8181A8"
+            android:text="Update Status"
+            android:textSize="8sp"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            />
+
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>

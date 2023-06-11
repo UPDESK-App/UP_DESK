@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.More">
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/_12sdp"
+
+>
+
+
+
+    <TextView
+        android:id="@+id/tvMyProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="My Profile"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:paddingVertical="@dimen/_8sdp"
+        android:drawableStart="@drawable/profile_vector"
+        android:textSize="17sp"
+        android:drawablePadding="@dimen/_20sdp"
+        android:textColor="@color/black"
+     />
+
+    <View
+        android:id="@+id/viewyprofile"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+       android:background="#F8F7F7"
+        android:layout_marginTop="@dimen/_5sdp"
+     android:layout_below="@id/tvMyProfile"/>
+
+
+
+
+
+    <TextView
+        android:id="@+id/tvFaq"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Help and FAQ"
+        android:paddingVertical="@dimen/_8sdp"
+        android:drawableStart="@drawable/faq_vector"
+        android:textSize="17sp"
+        android:drawablePadding="@dimen/_20sdp"
+        android:textColor="@color/black"
+
+        android:layout_below="@id/viewyprofile"/>
+
+    <View
+        android:id="@+id/viewFaq"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#F8F7F7"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_below="@id/tvFaq"/>
+
+    <TextView
+        android:id="@+id/tvOrganizationInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="My Organization"
+        android:paddingVertical="@dimen/_8sdp"
+        android:drawableStart="@drawable/organization_vector"
+        android:textSize="17sp"
+        android:drawablePadding="@dimen/_20sdp"
+        android:textColor="@color/black"
+
+        android:layout_below="@id/viewFaq"/>
+
+    <View
+        android:id="@+id/vieworginfo"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#F8F7F7"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_below="@id/tvOrganizationInfo"/>
+
+    <TextView
+        android:id="@+id/tvAbout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="About and Guidelines"
+        android:drawableStart="@drawable/info_btn"
+        android:textSize="17sp"
+        android:paddingVertical="@dimen/_8sdp"
+        android:drawablePadding="@dimen/_20sdp"
+        android:textColor="@color/black"
+
+        android:layout_below="@id/vieworginfo"/>
+
+    <View
+        android:id="@+id/viewAbout"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#F8F7F7"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_below="@id/tvAbout"/>
+
+
+
+    <TextView
+        android:id="@+id/tvDeleteAccountOrg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delete Account/Organization"
+        android:paddingVertical="@dimen/_8sdp"
+        android:drawableStart="@drawable/del"
+        android:textSize="17sp"
+        android:drawablePadding="@dimen/_20sdp"
+        android:textColor="@color/black"
+
+        android:layout_below="@id/viewAbout"/>
+
+    <View
+        android:id="@+id/viewDeleteAccountOrg"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#F8F7F7"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_below="@+id/tvDeleteAccountOrg"/>
+
+
+    <TextView
+        android:id="@+id/tvLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:paddingVertical="@dimen/_8sdp"
+        android:drawableStart="@drawable/logout_more_vector"
+        android:textSize="17sp"
+        android:drawablePadding="@dimen/_20sdp"
+        android:textColor="@color/black"
+
+        android:layout_below="@id/viewDeleteAccountOrg"/>
+
+    <View
+        android:id="@+id/viewlogout"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#F8F7F7"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_below="@+id/tvLogout"/>
+
+
+</RelativeLayout>
+</ScrollView>

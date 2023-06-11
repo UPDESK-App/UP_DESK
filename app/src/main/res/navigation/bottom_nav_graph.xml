@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_nav_graph"
+    app:startDestination="@id/chat">
+
+    <fragment
+        android:id="@+id/attendance"
+        android:name="com.example.updesk.Fragments.Attendance"
+        android:label="fragment_attendance"
+        tools:layout="@layout/fragment_attendance" />
+    <fragment
+        android:id="@+id/chat"
+        android:name="com.example.updesk.Fragments.Messenger"
+        android:label="fragment_messenger"
+        tools:layout="@layout/fragment_messenger" >
+
+    </fragment>
+    <fragment
+        android:id="@+id/tasks"
+        android:name="com.example.updesk.Fragments.Tasks"
+        android:label="fragment_tasks"
+        tools:layout="@layout/fragment_tasks" />
+    <fragment
+        android:id="@+id/more"
+        android:name="com.example.updesk.Fragments.More"
+        android:label="fragment_more"
+        tools:layout="@layout/fragment_more" />
+</navigation>

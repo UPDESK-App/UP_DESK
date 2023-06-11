@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".More.MyOrganizationActivity">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="5dp"
+
+    android:id="@+id/rlPC">
+    <org.eazegraph.lib.charts.PieChart
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:padding="10dp"
+        android:id="@+id/pieChart"
+       android:layout_alignParentRight="true"
+        android:layout_marginVertical="@dimen/_20sdp"
+        android:layout_marginRight="50dp"
+        />
+
+    <ImageView
+        android:layout_width="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_70sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/ivat"
+        android:src="@drawable/accepted_color_task"></ImageView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:id="@+id/tvclrAT"
+        android:layout_marginTop="@dimen/_70sdp"
+        android:text="Accepted Tasks"
+        android:textColor="@color/black"
+
+        android:layout_toRightOf="@id/ivat"></TextView>
+    <ImageView
+        android:layout_width="@dimen/_10sdp"
+        android:layout_below="@id/tvclrAT"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/ivrt"
+        android:src="@drawable/rejected_color_task"></ImageView>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvclrRT"
+        android:layout_below="@id/tvclrAT"
+        android:layout_marginLeft="5dp"
+        android:text="Rejected Tasks"
+        android:textColor="@color/black"
+        android:layout_toRightOf="@id/ivrt"></TextView>
+
+    <ImageView
+        android:layout_width="@dimen/_10sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_toLeftOf="@id/tvclrRT"
+        android:layout_below="@id/tvclrRT"
+        android:src="@drawable/pending_color_task"
+        android:id="@+id/ivpt"
+        android:layout_marginLeft="10dp"
+        ></ImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvclrPT"
+        android:layout_below="@id/tvclrRT"
+        android:layout_marginLeft="5dp"
+        android:text="Pending Tasks"
+        android:textColor="@color/black"
+        android:layout_toRightOf="@id/ivpt"></TextView>
+</RelativeLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cvTasksInfo"
+        android:padding="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_6sdp"
+        app:cardElevation="@dimen/_10sdp"
+        android:layout_marginVertical="@dimen/_20sdp"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:layout_below="@id/rlPC">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:paddingVertical="@dimen/_10sdp"
+            >
+            <TextView
+                android:id="@+id/tvTaskStats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="sans-serif-black"
+                android:padding="5dp"
+                android:text="Task Stats"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+android:textStyle="bold"
+                android:layout_centerHorizontal="true"
+                />
+
+            <ImageView
+                android:layout_width="@dimen/_55sdp"
+                android:layout_height="@dimen/_55sdp"
+                android:id="@+id/ivTAsks"
+                android:src="@drawable/taskimg"
+                android:layout_below="@id/tvTaskStats"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_10sdp"
+                />
+            <TextView
+                android:id="@+id/tvAccepted"
+
+                android:layout_below="@id/tvTaskStats"
+                android:layout_toEndOf="@id/ivTAsks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="sans-serif-light"
+                android:padding="6dp"
+                android:text="Accepted tasks:000"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:gravity="center_horizontal"
+                />
+            <TextView   android:id="@+id/tvRejected"
+                android:layout_below="@id/tvAccepted"
+                android:layout_toEndOf="@id/ivTAsks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="sans-serif-light"
+                android:padding="6dp"
+                android:text="Accepted tasks:000"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                />
+            <TextView
+            android:id="@+id/tvPending"
+                android:layout_below="@id/tvRejected"
+                android:layout_toEndOf="@id/ivTAsks"
+                android:layout_width="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="sans-serif-light"
+                android:padding="6dp"
+                android:text="Accepted tasks:000"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:layout_centerHorizontal="true"
+                />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cvUserInfo"
+        android:padding="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_6sdp"
+        app:cardElevation="@dimen/_10sdp"
+        android:layout_marginVertical="@dimen/_20sdp"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:layout_below="@id/cvTasksInfo">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:paddingVertical="@dimen/_10sdp"
+            >
+            <TextView
+                android:id="@+id/tvUsersStats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="sans-serif-black"
+                android:padding="5dp"
+                android:text="Users Stats"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
+                />
+
+            <ImageView
+                android:layout_width="@dimen/_65sdp"
+                android:layout_height="@dimen/_65sdp"
+                android:id="@+id/ivUsers"
+                android:src="@drawable/employeeimg"
+                android:layout_below="@id/tvUsersStats"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_10sdp"
+                />
+            <TextView
+                android:id="@+id/tvEmployers"
+
+                android:layout_below="@id/tvUsersStats"
+                android:layout_toEndOf="@id/ivUsers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="sans-serif-light"
+                android:padding="6dp"
+                android:text="Total employers:000"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:gravity="center_horizontal"
+                /> <TextView
+                android:id="@+id/tvEmployees"
+
+                android:layout_below="@id/tvEmployers"
+                android:layout_toEndOf="@id/ivUsers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="sans-serif-light"
+                android:padding="6dp"
+                android:text="Total employees:000"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:gravity="center_horizontal"
+                />
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

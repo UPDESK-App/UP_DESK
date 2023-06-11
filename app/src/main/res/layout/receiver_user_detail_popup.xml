@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center_vertical"
+    android:padding="40dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="About"
+            android:layout_gravity="center_horizontal"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textStyle="bold"
+            android:id="@+id/txtCreateAccount"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:scaleType="fitXY"
+            android:layout_marginTop="20dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:background="#666666"
+            android:src="@drawable/person"
+            app:shapeAppearanceOverlay="@style/RoundedCornerImage"
+            android:id="@+id/ivReceiverPropfilePhoto"
+            android:layout_below="@id/txtCreateAccount"
+            android:layout_centerHorizontal="true"
+
+            />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/receiverName"
+        android:layout_below="@id/ivReceiverPropfilePhoto"
+        android:text="Receiver Name"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/receiverName"
+        android:background="#F8F7F7"
+        android:paddingBottom="2dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/receiverEmail"
+        android:layout_below="@id/receiverName"
+        android:text="Receiver Email"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/receiverEmail"
+        android:background="#F8F7F7"
+        android:paddingBottom="2dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/receiverOC"
+        android:layout_below="@id/receiverEmail"
+        android:text="Receiver OC"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/receiverOC"
+        android:background="#F8F7F7"
+        android:paddingBottom="2dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/receiverUserType"
+        android:layout_below="@id/receiverOC"
+        android:text="Receiver User Type"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        />
+
+</RelativeLayout>
